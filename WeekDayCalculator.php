@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Class WeekDayCalculator
+ * required PHP 7.3
+ */
 class WeekDayCalculator
 {
 
@@ -35,6 +39,12 @@ class WeekDayCalculator
     private $month;
     private $year;
 
+    /**
+     * WeekDayCalculator constructor.
+     * @param int $day
+     * @param int $month
+     * @param int $year
+     */
     public function __construct(int $day , int $month, int $year)
     {
         $this->day = $day;
@@ -42,6 +52,9 @@ class WeekDayCalculator
         $this->year = $year;
     }
 
+    /**
+     * @return bool
+     */
     private function validateInput()
     {
         if (($this->year <= 1970) || ($this->year >= 2100)) {
